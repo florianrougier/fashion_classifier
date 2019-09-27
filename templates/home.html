@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+<section>
+      <h1 style="text-align:center;font-size: 36px;">Fashion mnist Flask API</h1>
+      <div style="margin: 0 auto;">
+          <div id="img-container" style="max-width:400px;height:300px;background-color:#E8A87C;margin:30px auto;border-radius:20px;text-align:center;">
+              <img src="" style="border-radius:20px; height:100%;">
+          </div>
+          <div style="text-align:center;">
+              <input type="file" id="file" style="display:none;" />
+              <button id="upload-button" style="background-color:#6772E5;color:#FFF;margin-right:50px;padding:8px 12px;border:0;border-radius:4px;font-size:1em;"
+                    name="button" value="Upload">
+                  Upload
+              </button>
+              <button id="predict-button" style="background-color:red;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;">
+                  Predict
+              </button>
+              <div id="prediction"  style="font-size:30px;font-weight:bold;margin-top:30px"></div>
+              <div id="confidence"  style="font-size:20px;margin-top:10px"></div>
+          </div>
+      </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="../static/js/scripts.js"></script>
+{% endblock %}
+
